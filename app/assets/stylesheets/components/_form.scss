@@ -1,0 +1,36 @@
+form {
+  .form-section {
+    @extend .m-t, .p-a;
+  }
+
+  .form-control-label {
+    // @extend .p-l-0, .p-y-0;
+
+    font-weight: bold;
+  }
+
+  .form-title {
+    @extend .p-b-lg;
+
+    display: flex;
+    align-items: center;
+    color: $gray-dark;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:before, &:after {
+      flex: 1;
+      border-bottom: 1px solid $gray-dark;
+      content: '';
+    }
+
+    &:before {
+      margin-right: 1em;
+    }
+
+    &:after {
+      margin-left: 1em;
+    }
+  }
+}
