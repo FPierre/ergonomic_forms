@@ -1,0 +1,116 @@
+<%= form_for @person, id: 'form' do |f| %>
+  <div class="row">
+    <div class="col-xs-12">
+      <section class="form-section">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-title">Personal information</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <%= f.label :first_name, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <%= f.text_field :first_name, class: 'form-control', placeholder: 'Input 1' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <%= f.label :last_name, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <%= f.text_field :last_name, class: 'form-control', placeholder: 'Input 2' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <%= f.label :birth_date, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <%= f.text_field :birth_date, class: 'form-control', placeholder: 'Input 2' %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <%= f.label :postal_code, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <%= f.text_field :postal_code, class: 'form-control', placeholder: 'Input 4' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <%= f.label :city, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <%= f.text_field :city, class: 'form-control', placeholder: 'Input 5' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <%= f.label :thoroughfare, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <%= f.text_field :thoroughfare, class: 'form-control', placeholder: 'Input 6' %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="form-group row">
+              <a class="bd-popover" tabindex="0" style="position: absolute; top: 0; left: 0;"
+                 data-toggle="popover" data-container="body" title="Texte approprié au champ"
+                 data-trigger="focus" data-placement="top" data-html="true"
+                 data-content="A block of help text that breaks onto a new <strong>line</strong> and may extend beyond one <strong>line</strong>.
+                 A second <strong>line</strong> of help text that breaks onto a new <strong>line</strong> and may extend beyond one <strong>line</strong>.">
+                <i class="fa fa-info"></i>
+              </a>
+
+              <%= f.label :gender, class: 'col-xs-3 form-control-label' %>
+
+              <div class="col-xs-9">
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option1" autocomplete="off"><i class="fa fa-mars"></i> Male
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"><i class="fa fa-venus"></i> Femal
+                  </label>
+                  <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option3" autocomplete="off" checked><i class="fa fa-question"></i> Unknow
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="form-group row">
+        <div class="col-xs-12">
+          <%= button_tag type: 'submit', class: 'btn btn-success pull-right' do %>
+            <i class="fa fa-check"></i> Valider
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+

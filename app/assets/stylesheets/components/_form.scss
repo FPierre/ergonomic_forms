@@ -4,9 +4,12 @@ form {
   }
 
   .form-control-label {
-    // @extend .p-l-0, .p-y-0;
+    @extend .text-right;
 
-    font-weight: bold;
+    font: {
+      weight: bold;
+      size: .9em;
+    }
   }
 
   .form-title {

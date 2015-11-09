@@ -116,9 +116,7 @@ $body-color:                 $gray-dark;
 // Set the number of columns and specify the width of the gutters.
 
 // $grid-columns:               12;
-$grid-gutter-width:          1.875rem; // 30px
-// $grid-gutter-width:          $spacer / 1.2;
-
+// $grid-gutter-width:          1.875rem; // 30px
 
 // Typography
 //
@@ -214,7 +212,7 @@ $border-radius-sm:       0rem;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  1.5rem;
+$btn-padding-x:                  1rem;
 $btn-padding-y:                  .7rem;
 // $btn-font-weight:                normal;
 
@@ -289,7 +287,7 @@ $input-padding-y:                .8rem;
 
 // $form-group-margin-bottom:       15px;
 
-$input-group-addon-bg:           #FFF;
+// $input-group-addon-bg:           #FFF;
 // $input-group-addon-border-color: $input-border;
 
 // $cursor-disabled:                not-allowed;
