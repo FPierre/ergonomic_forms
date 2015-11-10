@@ -1,7 +1,2 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Person.create first_name: 'Emmanuel', last_name: 'Durand', birth_date: Date.new(1979, 03, 03), gender: 1,
+              city: 'Lille', postal_code: '59000', thoroughfare: "rue de l'Amidonnerie", country: 'FR'

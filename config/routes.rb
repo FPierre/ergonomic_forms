@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resource :people
+  resources :people
 
   root 'people#new'
 end
