@@ -1,7 +1,10 @@
 class PeopleController < ApplicationController
-  before_action :set_person, only: [:edit, :update]
+  before_action :set_person, only: [:show, :edit, :update]
 
   def show
+    respond_to do |format|
+      format.json { render json: { person: @person }, status: :ok }
+    end
   end
 
   def new
@@ -34,6 +37,6 @@ class PeopleController < ApplicationController
     end
 
     def set_person
-      @person = Person.find params[:id]
+      @person = Person.find_by public_id: params[:public_id]
     end
 end
