@@ -21,3 +21,18 @@
     @include make-col-span(2);
   }
 }
+
+.sidebar {
+  @include make-col();
+
+  @include media-breakpoint-down(md) {
+    @include make-col-span(12);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col-span(2);
+
+    position: fixed;
+    top: 60px;
+  }
+}

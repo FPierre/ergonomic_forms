@@ -1,8 +1,43 @@
 $(document).on('ready page:load', function() {
+  var startTime = new Date();
+
+  Vue.filter('time', function(value) {
+    var hours = value.getHours();
+    var minutes = value.getMinutes();
+    var seconds = value.getSeconds();
+
+    return hours + ':' + minutes + ':' + seconds;
+  });
+
   Vue.http.headers.common['X-CSRF-TOKEN'] = $('input[name=authenticity_token]').val();
 
   var vm = new Vue({
-    el: '#form',
+    components: {
+      'current-time': {
+        template: '#time-tracker',
+        data: {
+          startTime: 0,
+          currentTime: 0
+        },
+        ready: function() {
+          this.startTime = new Date();
+
+          // this.updateTime();
+        },
+        methods: {
+          updateTime: function() {
+            var that = this;
+
+            setInterval(function() {
+              that.currentTime = new Date() - that.startTime;
+
+              console.log(that.currentTime);
+            }, 1000);
+          }
+        }
+      }
+    },
+    el: 'body',
     data: {
       person: {
         publicId:     $('#person_public_id').val(),
@@ -15,10 +50,10 @@ $(document).on('ready page:load', function() {
       },
       error: {
         updateContent: null
-      }
+      },
+      apiStatus: 'ok'
     },
     ready: function() {
-      console.log(this.person.firstName.value);
       // var resource = this.$resource('/people/:publicId');
 
       // resource.get({ publicId: this.person.publicId }, function(person, status, request) {
@@ -46,7 +81,7 @@ $(document).on('ready page:load', function() {
         this.error.updateContent = null;
 
         var fieldName = e.target.name.getAttributeName();
-        var fieldValue = this.person[fieldName.toCamelCase()].value;
+        var fieldValue = this.person[fieldName.toCamelCase()];
         var params = {};
 
         params[fieldName] = fieldValue;
@@ -57,7 +92,8 @@ $(document).on('ready page:load', function() {
 
           $(e.target).addClass('form-control-success')
                      .closest('.form-group').addClass('has-success');
-        }).error(function(data, status, request) {
+        })
+        .error(function(data, status, request) {
           console.log(data);
 
           this.error.updateContent = data.content[0];

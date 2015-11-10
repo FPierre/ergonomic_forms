@@ -1,7 +1,15 @@
 .form-status {
   @extend .p-a, .text-center;
 
-  color: $brand-success;
   background-color: #FFF;
-  border: 1px solid $brand-success;
+
+  &.up {
+    color: $brand-success;
+    border: 1px solid $brand-success;
+  }
+
+  &.down {
+    color: $brand-danger;
+    border: 1px solid $brand-danger;
+  }
 }
