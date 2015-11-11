@@ -12,3 +12,21 @@
 @import 'partials/*';
 // @import 'views';
 // @import 'layouts';
+
+input:required {
+  // background: #FFF url(images/red_asterisk.png) no-repeat 98% center;
+}
+
+// input est nécessaire car tous les champs .form-control ne sont pas forcément
+// utiles à modifier
+input.form-control:focus:invalid {
+  border-color: red;
+  // @extend .p-a-lg;
+  .form-group & {
+    // @extend .has-error;
+  }
+}
+
+input:required:valid {
+  border-color: #28921f;
+}

@@ -5,34 +5,39 @@
     @include make-col-span(12);
   }
 
-  @include media-breakpoint-up(md) {
-    @include make-col-span(10);
+  @include media-breakpoint-up(lg) {
+    @include make-col-span(9);
   }
 }
 
 .content-secondary {
   @include make-col();
 
-  @include media-breakpoint-down(md) {
-    @include make-col-span(12);
-  }
+  @extend .hidden-md-down;
 
   @include media-breakpoint-up(md) {
-    @include make-col-span(2);
+    @include make-col-span(3);
   }
 }
 
-.sidebar {
-  @include make-col();
+// body {
+//   @include media-breakpoint-up(xs) {
+//     background-color: blue;
+//   }
 
-  @include media-breakpoint-down(md) {
-    @include make-col-span(12);
-  }
+//   @include media-breakpoint-up(sm) {
+//     background-color: green;
+//   }
 
-  @include media-breakpoint-up(md) {
-    @include make-col-span(2);
+//   @include media-breakpoint-up(md) {
+//     background-color: yellow;
+//   }
 
-    position: fixed;
-    top: 60px;
-  }
-}
+//   @include media-breakpoint-up(lg) {
+//     background-color: orange;
+//   }
+
+//   @include media-breakpoint-up(xl) {
+//     background-color: red;
+//   }
+// }
