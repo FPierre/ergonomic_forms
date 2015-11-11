@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111093442) do
+ActiveRecord::Schema.define(version: 20151111110149) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "brand"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20151111093442) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "person_id"
+    t.string   "public_id"
   end
 
   add_index "cars", ["person_id"], name: "index_cars_on_person_id"
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20151111093442) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "car_id"
+    t.string   "public_id"
   end
 
   add_index "logbooks", ["car_id"], name: "index_logbooks_on_car_id"
@@ -36,6 +38,7 @@ ActiveRecord::Schema.define(version: 20151111093442) do
     t.datetime "updated_at", null: false
     t.integer  "person_id"
     t.integer  "car_id"
+    t.string   "public_id"
   end
 
   add_index "orders", ["car_id"], name: "index_orders_on_car_id"
