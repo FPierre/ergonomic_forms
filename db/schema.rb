@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111110149) do
+ActiveRecord::Schema.define(version: 20151114153333) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "brand"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 20151111110149) do
     t.string   "public_id"
     t.integer  "phone"
     t.string   "email"
+    t.float    "lat"
+    t.float    "lng"
   end
 
 end
