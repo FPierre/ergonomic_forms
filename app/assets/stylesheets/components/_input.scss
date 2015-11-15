@@ -4,6 +4,13 @@ input[type=text].form-control {
 
 }
 
+.input-group {
+  .input-group-addon + .form-control {
+    border-left: none;
+  }
+}
+
 .input-group-addon {
+  padding-right: 0; // Reset
   line-height: 1.5; // Reset
 }
