@@ -4,13 +4,21 @@ input[type=text].form-control {
 
 }
 
+// Supprime la bordure droite des inputs qui ont un addon
 .input-group {
   .input-group-addon + .form-control {
     border-left: none;
   }
+
+  // Ajuste le positionnement des addons
+  .input-group-addon {
+    padding-right: 0; // Reset
+    line-height: 1.5; // Reset
+  }
 }
 
-.input-group-addon {
-  padding-right: 0; // Reset
-  line-height: 1.5; // Reset
+.has-success, .has-error {
+  .input-group-addon {
+    background-color: $input-group-addon-bg;
+  }
 }
