@@ -7,3 +7,7 @@
 //= require vue-resource
 //
 //= require_tree .
+
+$(document).on('ready page:load', function() {
+  $('[data-toggle=popover]').popover();
+});
