@@ -1,5 +1,7 @@
 <%= form_for @person, html: { id: 'form' } do |f| %>
   <%= f.hidden_field :public_id %>
+  <%= f.hidden_field :lat %>
+  <%= f.hidden_field :lng %>
 
   <section id="person-information" class="form-section">
     <h3 class="form-title">Person information</h3>
@@ -109,7 +111,7 @@
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1"><i class="fa fa-home"></i></span>
               <%= f.text_field :city, class: 'form-control', placeholder: 'City',
-                  'v-model': 'person.city', 'v-on:keyup': 'update' %>
+                  'v-model': 'person.city' %>
             </div>
 
             <small class="text-muted text-help">{{ error.updateContent }}</small>
@@ -118,7 +120,7 @@
       </div>
 
       <div class="col-xs-12 col-md-4">
-        <div class="form-group row" v-show="person.city">
+        <div class="form-group row" v-show="person.city" transition="empty-field">
           <%= f.label :thoroughfare, class: 'col-xs-3 form-control-label' %>
 
           <div class="col-xs-9">
@@ -134,7 +136,7 @@
 
         <div class="form-group row" v-else>
           <div class="col-xs-9 col-xs-offset-3 text-center">
-            <small class="text-muted">Adresse non visible si ville non remplie</small>
+            <small class="text-muted">Rue non visible si ville non remplie</small>
           </div>
         </div>
       </div>

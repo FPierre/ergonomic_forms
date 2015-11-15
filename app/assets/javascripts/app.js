@@ -1,42 +1,16 @@
 $(document).on('ready page:load', function() {
-  var startTime = new Date();
-
-  Vue.filter('time', function(value) {
-    var hours = value.getHours();
-    var minutes = value.getMinutes();
-    var seconds = value.getSeconds();
-
-    return hours + ':' + minutes + ':' + seconds;
-  });
-
   Vue.http.headers.common['X-CSRF-TOKEN'] = $('input[name=authenticity_token]').val();
 
+  Vue.component('time-spend', TimeSpend);
+
+  Vue.transition('empty-field', {
+    css: false,
+    leave: function(el) {
+      $('input', el).val('');
+    }
+  });
+
   var vm = new Vue({
-    components: {
-      'current-time': {
-        template: '#time-tracker',
-        data: {
-          startTime: 0,
-          currentTime: 0
-        },
-        ready: function() {
-          this.startTime = new Date();
-
-          // this.updateTime();
-        },
-        methods: {
-          updateTime: function() {
-            var that = this;
-
-            setInterval(function() {
-              that.currentTime = new Date() - that.startTime;
-
-              console.log(that.currentTime);
-            }, 1000);
-          }
-        }
-      }
-    },
     el: 'body',
     data: {
       person: {
@@ -52,6 +26,11 @@ $(document).on('ready page:load', function() {
         updateContent: null
       },
       apiStatus: 'ok'
+    },
+    computed: {
+      age: function() {
+        return Math.round((new Date() - new Date(this.person.birthDate)) / (1000 * 60 * 60 * 24 * 365));
+      }
     },
     ready: function() {
       // var resource = this.$resource('/people/:publicId');
@@ -127,3 +106,4 @@ String.prototype.getActiveRecord = function() {
 String.prototype.getAttributeName = function() {
   return this.match(/[a-zA-Z0-9]+\[(.+)\]/i)[1];
 };
+
