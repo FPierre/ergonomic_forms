@@ -13,7 +13,7 @@ form {
   }
 
   .form-title {
-    @extend .p-b-lg;
+    @extend .p-b-md, .display-1;
 
     display: flex;
     align-items: center;
