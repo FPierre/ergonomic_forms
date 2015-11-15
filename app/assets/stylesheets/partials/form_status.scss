@@ -2,6 +2,7 @@
   @extend .p-a, .text-center;
 
   background-color: #FFF;
+  border-radius: $border-radius;
 
   &.up {
     color: $brand-success;
