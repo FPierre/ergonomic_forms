@@ -5,6 +5,7 @@
 // @import 'base/fonts';
 @import 'base/custom';
 @import 'bootstrap-flex';
+@import 'base/mixins';
 @import 'base/global';
 
 // http://blog.silvabox.com/materialize-on-rails-4-with-bower-and-heroku
@@ -29,4 +30,90 @@ input.form-control:focus:invalid {
 
 input:required:valid {
   border-color: #28921f;
+}
+
+// .custom-input-group {
+//   background-color: #FFF;
+//   border: 1px solid #CCC;
+
+//   & > div.col-xs-1 {
+//     @extend .p-l;
+
+//     display: flex;
+//     align-items: center;
+
+//     i {
+//       margin: auto;
+//     }
+//   }
+
+//   .form-control-label {
+//     @extend .p-a-0, .p-t-sm;
+
+//     font-size: .7rem;
+//     font-weight: normal;
+//     color: #777;
+//     text-transform: uppercase;
+//   }
+
+//   .form-control {
+//     @extend .p-a-0, .p-b-sm;
+//     font-size: 1.1rem;
+//     color: #333;
+//     border: none;
+//   }
+// }
+
+
+.custom-input-group {
+  @extend .m-b-md;
+
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  border: 1px solid $input-border;
+  border-radius: $border-radius;
+  -webkit-transition: all .1s ease;
+     -moz-transition: all .1s ease;
+      -ms-transition: all .1s ease;
+       -o-transition: all .1s ease;
+          transition: all .1s ease;
+
+  &.focus {
+    border-color: $brand-primary;
+
+    i {
+      color: $brand-primary;
+    }
+
+    .form-control-label {
+      color: $brand-primary;
+    }
+  }
+
+  i {
+    @extend .m-x-md;
+
+    -webkit-transition: color .1s ease;
+       -moz-transition: color .1s ease;
+        -ms-transition: color .1s ease;
+         -o-transition: color .1s ease;
+            transition: color .1s ease;
+  }
+
+  .form-control-label {
+    @extend .p-a-0, .p-t-sm;
+
+    font-size: .7rem;
+    font-weight: normal;
+    color: #777;
+    text-transform: uppercase;
+  }
+
+  .form-control {
+    @extend .p-a-0, .p-b-sm;
+    font-size: 1.1rem;
+    color: #333;
+    border: none;
+  }
 }

@@ -7,81 +7,75 @@
     <h3 class="form-title">Person information</h3>
 
     <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <div class="form-group row">
-          <%= f.label :first_name, class: 'col-xs-3 form-control-label' %>
+      <div class="col-xs-12 col-md-3">
+        <div class="custom-input-group">
+          <i class="fa fa-user"></i>
 
-          <div class="col-xs-9">
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-              <%= f.text_field :first_name, class: 'form-control', placeholder: 'Input 1', required: true,
-                  'v-model': 'person.firstName', 'v-on:keyup': 'update' %>
-            </div>
-
-            <small class="text-muted text-help">{{ error.updateContent }}</small>
+          <div>
+            <%= f.label :first_name, class: 'form-control-label' %>
+            <%= f.text_field :first_name, class: 'form-control', placeholder: 'Input 1', required: true,
+                'v-model': 'person.firstName', 'v-on:keyup': 'update' %>
           </div>
         </div>
+
+        <small class="text-muted text-help">{{ error.updateContent }}</small>
       </div>
 
-      <div class="col-xs-12 col-md-4">
-        <div class="form-group row">
-          <%= f.label :last_name, class: 'col-xs-3 form-control-label' %>
+      <div class="col-xs-12 col-md-3">
+        <div class="custom-input-group">
+          <i class="fa fa-user"></i>
 
-          <div class="col-xs-9">
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-              <%= f.text_field :last_name, class: 'form-control', placeholder: 'Input 2',
-                  'v-model': 'person.lastName', 'v-on:keyup': 'update' %>
-            </div>
-
-            <small class="text-muted text-help">{{ error.updateContent }}</small>
+          <div>
+            <%= f.label :last_name, class: 'form-control-label' %>
+            <%= f.text_field :last_name, class: 'form-control', placeholder: 'Input 2', required: true,
+                'v-model': 'person.lastName', 'v-on:keyup': 'update' %>
           </div>
         </div>
+
+        <small class="text-muted text-help">{{ error.updateContent }}</small>
       </div>
 
-      <div class="col-xs-12 col-md-4">
-        <div class="form-group row">
-          <%= f.label :birth_date, class: 'col-xs-3 form-control-label' %>
+      <div class="col-xs-12 col-md-3">
+        <div class="custom-input-group">
+          <i class="fa fa-calendar"></i>
 
-          <div class="col-xs-9">
+          <div>
+            <%= f.label :birth_date, class: 'form-control-label' %>
             <%= f.text_field :birth_date, class: 'form-control', placeholder: 'Input 3',
                 'v-model': 'person.birthDate', 'v-on:keyup': 'update' %>
-            <small class="text-muted text-help">{{ error.updateContent }}</small>
           </div>
+
+          <small class="text-muted text-help">{{ error.updateContent }}</small>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <div class="form-group row">
-          <%= f.label :phone, class: 'col-xs-3 form-control-label' %>
+      <div class="col-xs-12 col-md-3">
+        <div class="custom-input-group">
+          <i class="fa fa-phone"></i>
 
-          <div class="col-xs-9">
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
-              <%= f.text_field :phone, class: 'form-control', placeholder: 'Phone', required: true,
-                  'v-model': 'person.phone', 'v-on:keyup': 'update' %>
-            </div>
-
-            <small class="text-muted text-help">{{ error.updateContent }}</small>
+          <div>
+            <%= f.label :phone, class: 'form-control-label' %>
+            <%= f.text_field :phone, class: 'form-control', placeholder: 'Phone', required: true,
+                'v-model': 'person.phone', 'v-on:keyup': 'update' %>
           </div>
+
+          <small class="text-muted text-help">{{ error.updateContent }}</small>
         </div>
       </div>
 
-      <div class="col-xs-12 col-md-4">
-        <div class="form-group row">
-          <%= f.label :email, class: 'col-xs-3 form-control-label' %>
+      <div class="col-xs-12 col-md-3">
+        <div class="custom-input-group">
+          <i class="fa fa-at"></i>
 
-          <div class="col-xs-9">
-            <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-at"></i></span>
-              <%= f.email_field :email, class: 'form-control', placeholder: 'Email', pattern: '^.+@.+$',
-                  'v-model': 'person.email', 'v-on:keyup': 'update' %>
-            </div>
-
-            <small class="text-muted text-help">{{ error.updateContent }}</small>
+          <div>
+            <%= f.label :email, class: 'form-control-label' %>
+            <%= f.email_field :email, class: 'form-control', placeholder: 'Email', pattern: '^.+@.+$',
+                'v-model': 'person.email', 'v-on:keyup': 'update' %>
           </div>
+
+          <small class="text-muted text-help">{{ error.updateContent }}</small>
         </div>
       </div>
     </div>
@@ -93,7 +87,7 @@
 
           <div class="col-xs-9">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-home"></i></span>
+              <span class="input-group-addon"><i class="fa fa-home"></i></span>
               <%= f.text_field :postal_code, class: 'form-control', placeholder: 'Postal code',
                   'v-model': 'person.postalCode', 'v-on:keyup': 'update' %>
             </div>
@@ -109,9 +103,9 @@
 
           <div class="col-xs-9">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-home"></i></span>
+              <span class="input-group-addon"><i class="fa fa-home"></i></span>
               <%= f.text_field :city, class: 'form-control', placeholder: 'City',
-                  'v-model': 'person.city' %>
+                  'v-model': 'person.city', 'v-on:keyup': 'update' %>
             </div>
 
             <small class="text-muted text-help">{{ error.updateContent }}</small>
@@ -125,7 +119,7 @@
 
           <div class="col-xs-9">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1"><i class="fa fa-home"></i></span>
+              <span class="input-group-addon"><i class="fa fa-home"></i></span>
               <%= f.text_field :thoroughfare, class: 'form-control', placeholder: 'Thoroughfare',
                   'v-model': 'person.thoroughfare', 'v-on:keyup': 'update' %>
             </div>
