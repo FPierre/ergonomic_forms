@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="content-secondary">
-      <%= render 'partials/sidebar' %>
+      <%= render 'application/sidebar' %>
     </div>
 
     <div class="content-main">
@@ -15,3 +15,7 @@
     </div>
   </div>
 </div>
+
+<% content_for :sidebar do %>
+  <%= render 'application/sidebar' %>
+<% end %>

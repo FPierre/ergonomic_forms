@@ -19,6 +19,8 @@
 <body data-namespace="<%= controller_name.deconstantize %>"
       data-controller="<%= controller_name.demodulize %>"
       data-action="<%= action_name %>">
+  <%= yield :breadcrumb %>
+
   <main>
     <%= yield %>
   </main>

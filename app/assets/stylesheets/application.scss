@@ -57,34 +57,81 @@ input:required:valid {
     @extend .m-x-md;
   }
 
-  .form-control-label {
-    @extend .p-a-0, .p-t-sm;
+  div {
+    width: 100%;
 
-    font-size: .7rem;
-    font-weight: normal;
-    color: #777;
-    text-transform: uppercase;
+    .form-control-label {
+      @extend .p-a-0, .p-t-sm;
+
+      font-size: .7rem;
+      font-weight: normal;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    .btn-popover {
+      @extend .pull-right, .m-r-sm, .hidden-sm-down;
+
+      cursor: pointer;
+      outline: 0;
+
+      i.fa-info {
+        color: $gray-lighter;
+
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+
+    .form-control {
+      @extend .p-a-0, .p-b-sm;
+
+      font-size: 1.1rem;
+      color: #333;
+      border: none;
+    }
   }
+}
 
-  .bd-popover {
-    @extend .pull-right, .m-r-sm;
+.custom-btn-group {
+  @extend .m-b-md;
 
-    cursor: pointer;
-    outline: 0;
+  div {
+    width: 100%;
 
-    i.fa-info {
-      color: $gray-lighter;
+    .form-control-label {
+      @extend .p-a-0, .p-b-sm;
 
-      &:hover {
-        color: $gray;
+      font-size: .7rem;
+      font-weight: normal;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    .btn-popover {
+      @extend .pull-right, .m-r-sm, .hidden-sm-down;
+
+      cursor: pointer;
+      outline: 0;
+
+      i.fa-info {
+        color: $gray-lighter;
+
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+
+    .btn-group {
+      label {
+        padding: {
+          top: .2rem;
+          bottom: .2rem;
+        };
       }
     }
   }
-
-  .form-control {
-    @extend .p-a-0, .p-b-sm;
-    font-size: 1.1rem;
-    color: #333;
-    border: none;
-  }
 }
+

@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
 
   private
 
-  def set_public_id
-    public_id = UniqueIdService::generate unless public_id
-  end
+    def set_public_id
+      public_id = UniqueIdService::generate unless public_id
+    end
 end

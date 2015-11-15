@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap', github: 'twbs/bootstrap-rubygem'
 
 gem 'lograge'
+# Geocoding
+gem 'geocoder', '~> 1.2', '>= 1.2.12'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

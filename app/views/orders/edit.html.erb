@@ -1,7 +1,14 @@
+<%= render layout: 'sidebar/sidebar' do %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <%= render 'application/sidebar' %>
+<% end %>
+
 <div class="container-fluid">
   <div class="row">
     <div class="content-secondary">
-      <%= render 'partials/sidebar' %>
+      <%= render 'application/sidebar' %>
     </div>
 
     <div class="content-main">
