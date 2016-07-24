@@ -15,12 +15,12 @@
               li = message
 
       .row
-        .col-xs-12
+        .col-xs-12.col-md-6
           fieldset.form-group
             label = f.label :firstname
             = f.text_field :firstname, class: 'form-control'
 
-        .col-xs-12
+        .col-xs-12.col-md-6
           fieldset.form-group
             label = f.label :lastname
             = f.text_field :lastname, class: 'form-control'
@@ -30,12 +30,12 @@
             label = f.label :thoroughfare
             = f.text_field :thoroughfare, class: 'form-control'
 
-        .col-xs-12
+        .col-xs-12.col-md-8
           fieldset.form-group
             label = f.label :city
             = f.text_field :city, class: 'form-control'
 
-        .col-xs-12
+        .col-xs-12.col-md-4
           fieldset.form-group
             label = f.label :postal_code
             = f.text_field :postal_code, class: 'form-control'
