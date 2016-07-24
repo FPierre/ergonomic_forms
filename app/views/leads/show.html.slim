@@ -1,12 +1,31 @@
-p#notice = notice
+.container-fluid
+  .row
+    .col-xs-12
+      #notice = notice
 
-p = @lead.firstname
-p = @lead.lastname
-p = @lead.thoroughfare
-p = @lead.city
-p = @lead.postal_code
-p = @lead.country
-p = @lead.birth_date
+  .row
+    .col-xs-12
+      = @lead.firstname
 
-= link_to 'Edit', edit_lead_path(@lead)
-= link_to 'Back', leads_path
+    .col-xs-12
+      = @lead.lastname
+
+    .col-xs-12
+      = @lead.thoroughfare
+
+    .col-xs-12
+      = @lead.city
+
+    .col-xs-12
+      = @lead.postal_code
+
+    .col-xs-12
+      = @lead.country
+
+    .col-xs-12
+      = @lead.birth_date
+
+  .row
+    .col-xs-12
+      = link_to 'Edit', edit_lead_path(@lead)
+      = link_to 'Back', leads_path
