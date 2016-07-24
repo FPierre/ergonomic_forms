@@ -1,28 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<html>
+  <head>
+    <title>ErgonomicForms</title>
+    <%= csrf_meta_tags %>
 
-  <title>FormButler</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
-  <%= csrf_meta_tags %>
-</head>
-<body data-namespace="<%= controller_name.deconstantize %>"
-      data-controller="<%= controller_name.demodulize %>"
-      data-action="<%= action_name %>">
-  <%= yield :breadcrumb %>
-
-  <main>
+  <body>
     <%= yield %>
-  </main>
-</body>
+  </body>
 </html>
