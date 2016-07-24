@@ -1,0 +1,12 @@
+p#notice = notice
+
+p = @lead.firstname
+p = @lead.lastname
+p = @lead.thoroughfare
+p = @lead.city
+p = @lead.postal_code
+p = @lead.country
+p = @lead.birth_date
+
+= link_to 'Edit', edit_lead_path(@lead)
+= link_to 'Back', leads_path

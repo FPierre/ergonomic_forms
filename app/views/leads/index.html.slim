@@ -1,0 +1,32 @@
+p#notice = notice
+
+h1 Leads
+
+table
+  thead
+    tr
+      th Firstname
+      th Lastname
+      th Thoroughfare
+      th City
+      th Postal code
+      th Country
+      th Birth date
+      th[colspan="3"]
+  tbody
+    - @leads.each do |lead|
+      tr
+        td = lead.firstname
+        td = lead.lastname
+        td = lead.thoroughfare
+        td = lead.city
+        td = lead.postal_code
+        td = lead.country
+        td = lead.birth_date
+        td = link_to 'Show', lead
+        td = link_to 'Edit', edit_lead_path(lead)
+        td = link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' }
+
+br
+
+= link_to 'New Lead', new_lead_path

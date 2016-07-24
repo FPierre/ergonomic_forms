@@ -10,7 +10,7 @@ class CreateLeads < ActiveRecord::Migration[5.0]
       t.string :phone,        limit: 20,                   null: false
       t.string :email,        limit: 50
       t.text :internal_comment
-      t.datetime :birth_date
+      t.date :birth_date
 
       t.timestamps
     end

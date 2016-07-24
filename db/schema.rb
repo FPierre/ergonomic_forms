@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160724153136) do
     t.string   "phone",            limit: 20,                     null: false
     t.string   "email",            limit: 50
     t.text     "internal_comment"
-    t.datetime "birth_date"
+    t.date     "birth_date"
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end
