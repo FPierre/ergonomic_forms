@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Leads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Thoroughfare</th>
+      <th>City</th>
+      <th>Postal code</th>
+      <th>Country</th>
+      <th>Birth date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leads.each do |lead| %>
+      <tr>
+        <td><%= lead.firstname %></td>
+        <td><%= lead.lastname %></td>
+        <td><%= lead.thoroughfare %></td>
+        <td><%= lead.city %></td>
+        <td><%= lead.postal_code %></td>
+        <td><%= lead.country %></td>
+        <td><%= lead.birth_date %></td>
+        <td><%= link_to 'Show', lead %></td>
+        <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
+        <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lead', new_lead_path %>
