@@ -16,33 +16,40 @@
 
       .row
         .col-xs-12
-          = f.label :firstname
-          = f.text_field :firstname
+          fieldset.form-group
+            label = f.label :firstname
+            = f.text_field :firstname, class: 'form-control'
 
         .col-xs-12
-          = f.label :lastname
-          = f.text_field :lastname
+          fieldset.form-group
+            label = f.label :lastname
+            = f.text_field :lastname, class: 'form-control'
 
         .col-xs-12
-          = f.label :thoroughfare
-          = f.text_field :thoroughfare
+          fieldset.form-group
+            label = f.label :thoroughfare
+            = f.text_field :thoroughfare, class: 'form-control'
 
         .col-xs-12
-          = f.label :city
-          = f.text_field :city
+          fieldset.form-group
+            label = f.label :city
+            = f.text_field :city, class: 'form-control'
 
         .col-xs-12
-          = f.label :postal_code
-          = f.text_field :postal_code
+          fieldset.form-group
+            label = f.label :postal_code
+            = f.text_field :postal_code, class: 'form-control'
 
         .col-xs-12
-          = f.label :country
-          = f.text_field :country
+          fieldset.form-group
+            label = f.label :country
+            = f.text_field :country, class: 'form-control'
 
         .col-xs-12
-          = f.label :birth_date
-          = f.date_select :birth_date
+          fieldset.form-group
+            label = f.label :birth_date
+            = f.date_select :birth_date, class: 'form-control'
 
       .row
         .col-xs-12
-          = f.submit
+          = submit_tag 'Créer' , class: 'pull-xs-right btn btn-primary'
