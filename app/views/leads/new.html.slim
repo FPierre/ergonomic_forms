@@ -1,5 +1,11 @@
 = render 'breadcrumb'
 
-= render 'form', lead: @lead
+.container-fluid
+  .row
+    .col-xs-12.col-md-3
+      = render 'sidebar'
 
-= link_to 'Back', leads_path, class: 'btn btn-secondary'
+    .col-xs-12.col-md-9
+      = render 'form', lead: @lead
+
+  = link_to 'Back', leads_path, class: 'btn btn-secondary'
