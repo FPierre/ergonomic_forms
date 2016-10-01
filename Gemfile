@@ -1,15 +1,11 @@
 source 'https://rubygems.org'
 
-
 ruby '2.3.1'
 
-gem 'awesome_print'
-gem 'bootstrap', '~> 4.0.0.alpha3'
-gem 'coffee-rails', '~> 4.2'
-gem 'font-awesome-rails'
-gem 'jquery-rails'
-gem 'lograge'
-gem 'puma', '~> 3.0'
+gem 'awesome_print', '~> 1.6', '>= 1.6.1'
+gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
+gem 'jquery-rails', '~> 4.2', '>= 4.2.1'
 gem 'rails', '~> 5.0.0'
 gem 'sass-rails', '~> 5.0'
 gem 'slim', '~> 3.0', '>= 3.0.7'
