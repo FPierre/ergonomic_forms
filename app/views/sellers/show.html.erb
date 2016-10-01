@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @seller.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @seller.city %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @seller.postal_code %>
+</p>
+
+<p>
+  <strong>Thorougfare:</strong>
+  <%= @seller.thorougfare %>
+</p>
+
+<p>
+  <strong>Internal comment:</strong>
+  <%= @seller.internal_comment %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @seller.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @seller.phone %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @seller.country %>
+</p>
+
+<p>
+  <strong>Director firstname:</strong>
+  <%= @seller.director_firstname %>
+</p>
+
+<p>
+  <strong>Director lastname:</strong>
+  <%= @seller.director_lastname %>
+</p>
+
+<%= link_to 'Edit', edit_seller_path(@seller) %> |
+<%= link_to 'Back', sellers_path %>

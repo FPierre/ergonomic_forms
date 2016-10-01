@@ -1,0 +1,67 @@
+<%= form_for(seller) do |f| %>
+  <% if seller.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(seller.errors.count, "error") %> prohibited this seller from being saved:</h2>
+
+      <ul>
+      <% seller.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postal_code %>
+    <%= f.text_field :postal_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thorougfare %>
+    <%= f.text_field :thorougfare %>
+  </div>
+
+  <div class="field">
+    <%= f.label :internal_comment %>
+    <%= f.text_area :internal_comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :director_firstname %>
+    <%= f.text_field :director_firstname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :director_lastname %>
+    <%= f.text_field :director_lastname %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
